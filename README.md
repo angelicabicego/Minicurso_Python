@@ -1,4 +1,4 @@
-## Minicurso: Pyhton para Manipulação e Análise de Dados
+## Minicurso: Python para Manipulação e Análise de Dados
 
 Ministrado em parceria com o Programa de Educação Tutorial(PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
 
@@ -12,7 +12,7 @@ Para isso, foi utilizado um banco de dados da PNAD (Pesquisa Nacional de Amostra
 
 Em um primeiro momento, tivemos a parte teórica abrangendo os seguintes temas:
 
-* Visão abrangente sobre Pyhton (e R) e suas possibilidades;
+* Visão abrangente sobre Python (e R) e suas possibilidades;
 
 * Linha Histórica da PNAD;
 
@@ -22,7 +22,7 @@ Em um primeiro momento, tivemos a parte teórica abrangendo os seguintes temas:
 
 Em seguida, tivemos a parte prática no Ambiente de Desenvolvimento do Google COLAB, disponível [aqui](https://colab.research.google.com/drive/1M88teWhAczc3CSpxYitFmRuNU6wB9iFP#scrollTo=3pkH1Qm8BySv) e também a seguir. 
 
-Por isso, nada referente à instalação e configuração do Pyhton foi necessário.
+Por isso, nada referente à instalação e configuração do Python foi necessário.
 
 </details>
 
