@@ -2,11 +2,13 @@
 
 ### Ministrado em parceria com o Programa de Educação Tutorial(PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
 
-##Introdução
+---
+
+## Introdução
 
 Esse curso tem como objetivo facilitar o contato com a linguagem Python e suas possibilidades básicas na área de dados, além de trazer segurança e coragem para que qualquer pessoa se aventure nesse universo!
 
-Para isso, foi utilizado um banco de dados da PNAD (Pesquisa Nacional de Amostra Domiciliar) disponibilizado neste repositório com o nome de df_Minicurso.xlsx, o qual conta com o arquivo de dicionário de variáveis (dicionario_PNADC_microdados_trimestrdicionario_pnade4_20220224.xls).
+Para isso, foi utilizado um banco de dados da PNAD (Pesquisa Nacional de Amostra Domiciliar) disponibilizado neste repositório com o nome de [df_Minicurso.xlsx](../df_Minicurso.xlsx), o qual conta com o arquivo de dicionário de variáveis ([dicionario.xls](../dicionario_PNADC_microdados_trimestre4_20220224.xls)).
 
 Em um primeiro momento, tivemos a parte teórica abrangendo os seguintes temas:
 
@@ -18,23 +20,23 @@ Em um primeiro momento, tivemos a parte teórica abrangendo os seguintes temas:
 
 * Conceitos de Variáveis, Tipos e Estruturas de Dados;
 
-Em seguida, tivemos a parte prática no Ambiente de Desenvolvimento do Google COLAB, disponível [aqui](https://colab.research.google.com/drive/1M88teWhAczc3CSpxYitFmRuNU6wB9iFP#scrollTo=3pkH1Qm8BySv) e também disponível a seguir. 
+Em seguida, tivemos a parte prática no Ambiente de Desenvolvimento do Google COLAB, disponível [aqui](https://colab.research.google.com/drive/1M88teWhAczc3CSpxYitFmRuNU6wB9iFP#scrollTo=3pkH1Qm8BySv) e também a seguir. 
 
 Por isso, nada referente à instalação e configuração do Pyhton foi necessário.
 
 </details>
 
-<details><summary>Boas Vindas</summary>
+<details><summary>##Boas Vindas</summary>
 
 Para dar boa sorte nesse processos e testar nosso ambiente de programação, vamos imprimir "Olá, Mundo!" na nossa tela.
 
-ˋˋˋ
+```
 print('Olá, Mundo!')
-ˋˋˋ
+```
 
 </details>
 
-<details><summary>Google Colab</summary>
+<details><summary>##Google Colab</summary>
 
 O Colaboratory ou “Colab” é um produto do Google Research, que permite que qualquer pessoa escreva e execute código Python arbitrário pelo navegador. Não requer nenhuma configuração e é sem custo financeiro.
 
@@ -50,23 +52,23 @@ O Google Colab não consegue ler um arquivo que está no nosso computador, por i
 
 Para isso, clicar na pasta no canto esquerdo "Arquivos". Em seguida, clicar no primeiro item para fazer upload do arquivo que está no computador, encontrá-lo e clicar em Abrir, conforme a imagem:
 
-<img src="https://github.com/abicego/Minicurso_Python/images/colab_arquivos.jpg">
+<img src="https://github.com/abicego/Minicurso_Python/blob/master/images/colab_arquivos.jpg">
 
 </details>
 
-<details><summary>Importando Biblioteca</summary>
+<details><summary>##Importando Biblioteca</summary>
 
 Neste primeiro momento, importaremos apenas a Biblioteca [PANDAS](https://pandas.pydata.org/) (com o "apelido" de pd), que é utilizada para manipulação e análise de dados, escrita em Python.
 
 Obs: Biblioteca pode ser entendido como um conjunto de funções/ vários códigos que já foram escritos e estão disponíveis para serem usadas por qualquer pessoa ao utilizar essa linguagem
 
-ˋˋˋ
+```
 import pandas as pd
-ˋˋˋ
+```
 
 </details>
 
-<details><summary>Lendo a PNAD</summary>
+<details><summary>##Lendo a PNAD</summary>
 
 Agora, utilizamos uma função da biblioteca pandas para importar nosso arquivo de dados para esse ambiente
 
@@ -79,11 +81,11 @@ Ela tem que ser definida antes da função, para que consiga ser lida
 
 3. O df original não possui um cabeçalho com o nome de cada coluna, por isso, defini o nome das colunas com o atributo .columns
 
-ˋˋˋ
+```
 width_df = [copiar e colar aqui a sequência numérica da coluna "Tamanho" presente no dicionário, exemplo: 4, 1, 2, 2, 2, 9, 7, ...]
 df = pd.read_fwf('C:/Users/seucaminho/Arquivo.txt', header=None, dtype=str, widths=width_df)
 df.columns = [copiar e colar aqui a sequência numérica da coluna "Código da variável" presente no dicionário, exemplo: 'Ano', 'Trimestre', 'Capital', 'RM_RIDE', 'UPA', ... ]
-ˋˋˋ
+```
 
 * Nosso arquivo (neste ambiente):
 
@@ -92,16 +94,16 @@ df.columns = [copiar e colar aqui a sequência numérica da coluna "Código da v
 3. Usar a função pd.read_excel ler nossa base de dados
 
 
-ˋˋˋ
+```
 df_pnad = pd.read_excel('/content/df_Minicurso.xlsx')
-ˋˋˋ
+```
 
 
 Criar uma cópia do dataframe original, para garantir a integridade caso algo aconteça: ˋdf=df_pnadˋ
 
 </details>
 
-<details><summary>DataFrame / Visualização dos dados: Tabelas</summary>
+<details><summary>##DataFrame / Visualização dos dados: Tabelas</summary>
 
 Para fins didáticos, aqui o DataFrame pode ser ententido apenas como o banco de dados em si. 
 
@@ -117,69 +119,69 @@ Nome das colunas: `df.columns`
 
 Banco de dados, de acordo com ascendência (ou não) em determinada coluna 
 
-ˋˋˋ
+```
 df.sort_values('V2010', ascending=True).head(20)
 df.sort_values('V2010', ascending=False).head(20)
-ˋˋˋ
+```
 
 Visualização de duas (ou +) colunas, lado a lado
 
-ˋˋˋ
+```
 df[['V2007','V2010']]
 df[['V2007','V2010']].head()
-ˋˋˋ
+```
 
 Ver a distribuição de acordo com determinada condição
 
-ˋˋˋ
+```
 df[df['V2005']==8][['UF',V2007','V2010']]
-ˋˋˋ
+```
 
 Cruzar 2 variáveis
 
-ˋˋˋ
+```
 pd.crosstab(index=df['V2007'], columns=df['V2010'])
-ˋˋˋ
+```
 
 Cruzar 3 variáveis
 
-ˋˋˋ
+```
 pd.crosstab(df['V2005'], [(df['V2007']), df['V2010']], rownames=['Condição'], colnames=['sexo', 'cor'])
-ˋˋˋ
+```
 
 Cruzar 3 variáveis de acordo com determinadas condições
 
-ˋˋˋ
+```
 pd.crosstab(df['V2005']=='8', [(df['V2007']=='01'), df['V2010']], rownames=['Condição'], colnames=['sexo', 'cor'])
-ˋˋˋ
+```
 
 Contagem de casos de determinada coluna de acordo com a categoria
 
-ˋˋˋ
+```
 df['V2007'].value_counts()
-ˋˋˋ
+```
 
 Agrupamento de casos por atributo e a média de outra caracteristica
 
-ˋˋˋ
+```
 df.groupby('V2007')['V2009'].mean()
-ˋˋˋ
+```
 
 Panorama geral da estatística descritiva do dataframe
 
-ˋˋˋ
+```
 df.describe()
-ˋˋˋ
+```
 
 Panorama geral estatística descritiva de uma coluna ou mais colunas
 
-ˋˋˋ
+```
 df_final[['V2009', 'VD4019']].describe()
-ˋˋˋ
+```
 
 </details>
 
-<details><summary>Atribuição de rótulos</summary>
+<details><summary>##Atribuição de rótulos</summary>
 
 Aqui, veremos como alterar o nome das colunas e o rotulos dos dados. Vale ressaltar que quando um dado é do tipo string, este deve estar entre aspas (duplas ou simples), já se for numérico, tem que ser informado sem as aspas.
 
@@ -187,7 +189,7 @@ Relembrando nome das colunas: `df_pnad.columns`
 
 Renomear Colunas
 
-ˋˋˋ
+```
 df=df.rename(columns={
       'V1022': 'Situação_do_domicílio',
       'V2005': 'Condição_no_domicílio',
@@ -214,13 +216,13 @@ df=df.rename(columns={
       'VD4036' : 'Faixa_horas_trabalhadas_semana',
       'VDI5012' : 'Faixa_de_rendimento_domiciliar_per_capita'
 })
-ˋˋˋ
+```
 
 Analisar a alteração dos nomes das colunas: `df.columns`
 
 Renomear Atributos
 
-ˋˋˋ
+```
 df=df.replace({ 
       'Situação_do_domicílio' : {1:'Urbana',2:'Rural'},
       'Condição_no_domicílio' : {7 : 'Genro ou nora', 8 : 'Pai, mãe, padrasto ou madrasta', 9 : 'Sogro(a)'},
@@ -240,7 +242,7 @@ df=df.replace({
       'Faixa_horas_trabalhadas_semana' : {1: 'Até 14 horas', 2: '15 a 39 horas', 3: '40 a 44 horas',4: '45 a 48 horas', 5: '49 horas ou mais'},
       'Faixa_de_rendimento_domiciliar_per_capita' : {1: 'Até ¼ salário mínimo', 2: 'Mais de ¼ até ½ salário mínimo', 3: 'Mais de ½ até 1 salário mínimo', 4: 'Mais de 1 até 2 salários mínimos',5: 'Mais de 2  até 3 salários mínimos',6: 'Mais de 3 até 5 salários mínimos',7: 'Mais de 5 salários mínimos',9: 'Ignorado'},
 })
-ˋˋˋ
+```
 
 Analisar a alteração dos nomes dos atributos: `df['Sexo'].value_counts()`
 
@@ -248,7 +250,7 @@ Comando para ver o tipo de dados de cada coluna: `df.dtypes`
 
 </details>
 
-<details><summary>Estrutura condicional e filtros</summary>
+<details><summary>##Estrutura condicional e filtros</summary>
 
 Criar uma variável de filtro baseada em condições, por exemplo: Se na coluna X o valor for igual a 1 e na Y for igual a 2, a variável de nome Filtro marcará Verdade (True), se não, Falso.
 
@@ -266,7 +268,7 @@ Ver a distribuição da Filtro, por coluna
 df[df['Filtro']==True][['Filtro','UF','Condição_no_domicílio', 'Idade_do_morador']]
 ```
 
-Fazer Agrupamento utilizando o método (.loc)[https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html]. É mais utilizado para definir rapidamente instruções lógicas simples em poucas linhas quando a condição tiver um resultado binário (tanto verdadeiro quanto falso).
+Fazer Agrupamento utilizando o método [.loc](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.loc.html). É mais utilizado para definir rapidamente instruções lógicas simples em poucas linhas quando a condição tiver um resultado binário (tanto verdadeiro quanto falso).
 
 ```
 df.loc[(df['Idade_do_morador'] >=18 ) & (df['Idade_do_morador'] <=20),  'Faixa_Etaria'] = '18 a 20 anos'
@@ -291,7 +293,7 @@ df['Faixa_Etaria'].value_counts(ascending=True)
 
 </details>
 
-<details><summary>Divisão de banco de dados</summary>
+<details><summary>##Divisão de banco de dados</summary>
 
 "Criar" um novo banco de dados baseado na coluna Filtro
 
@@ -305,7 +307,7 @@ Analisar o shape do banco: `df_filter.shape`
 
 </details>
 
-<details><summary>Limpeza da base de dados</summary>
+<details><summary>##Limpeza da base de dados</summary>
 
 Limpar a base de dados consiste em apagar colunas ou casos não desejados.
 
@@ -352,7 +354,7 @@ dfteste = dfteste[dfteste['Rendimento_mensal'].notna()]
 
 </details>
 
-<details><summary>Juntar bases de dados</summary>
+<details><summary>##Juntar bases de dados</summary>
 
 Juntar / Agrupar bancos de dados, funções disponíveis: [.concat()](https://pandas.pydata.org/docs/reference/api/pandas.concat.html); [.join()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html) e  [.merge()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
 
@@ -366,7 +368,7 @@ Analisar shpe do banco: `df_concat.shape`
 
 </details>
 
-<details><summary>Exportação de base de dados</summary>
+<details><summary>##Exportação de base de dados</summary>
 
 A qualquer momento é possível salvar/ exportar o banco de dados para uso posterior e em praticamente qualquer formato/ extensão (excel, csv, txt). O que muda é a função do pandas utilizada
 
@@ -402,7 +404,7 @@ files.download('df_FINAL_Minicurso.xlsx', index=False)
 
 </details>
 
-<details><summary>Visualização dos dados: Gráficos</summary>
+<details><summary>##Visualização dos dados: Gráficos</summary>
 
 Para gerar gráficos, é necessário importar as bibliotecas: [Seaborn](https://seaborn.pydata.org/index.html) e 
 [Matplotlib](https://https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html). Vale ressaltar que é possível ajustar praticamente todos os aspectos visuais conforme consta nas respectivas documentações.
@@ -498,7 +500,7 @@ plt.show(scatt)
 
 </details>
 
-<details><summary>Relatório</summary>
+<details><summary>##Relatório</summary>
 
 Já vimos como salvar os gráficos como imagem, agora, para salvar todo esse notebook (de extensão .ipynb), incluindo tópicos, textos, códigos e outputs (TUDO que aparece nele) em PDF, seguir o seguinte passo:
 
