@@ -26,7 +26,10 @@ Por isso, nada referente à instalação e configuração do Pyhton foi necessá
 
 </details>
 
-<details><summary open>## Boas Vindas</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Boas Vindas
+      </summary>
 
 Para dar boa sorte nesse processos e testar nosso ambiente de programação, vamos imprimir "Olá, Mundo!" na nossa tela.
 
@@ -36,7 +39,10 @@ print('Olá, Mundo!')
 
 </details>
 
-<details><summary open>## Google Colab</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Google Colab
+      </summary>
 
 O Colaboratory ou “Colab” é um produto do Google Research, que permite que qualquer pessoa escreva e execute código Python arbitrário pelo navegador. Não requer nenhuma configuração e é sem custo financeiro.
 
@@ -47,7 +53,6 @@ Você pode criar um notebook (livro de código) em Arquivos > Novo notebook para
 
 * Upload de Arquivos
 
-
 O Google Colab não consegue ler um arquivo que está no nosso computador, por isso é importante colocar esse arquivo aqui dentro do nosso notebook todas as vezes que formos utilizá-los. Esse arquivo será excluído automaticamente após o encerramento do ambiente de excecução.
 
 Para isso, clicar na pasta no canto esquerdo "Arquivos". Em seguida, clicar no primeiro item para fazer upload do arquivo que está no computador, encontrá-lo e clicar em Abrir, conforme a imagem:
@@ -56,7 +61,10 @@ Para isso, clicar na pasta no canto esquerdo "Arquivos". Em seguida, clicar no p
 
 </details>
 
-<details><summary open>## Importando Biblioteca</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Importando Biblioteca
+      </summary>
 
 Neste primeiro momento, importaremos apenas a Biblioteca [PANDAS](https://pandas.pydata.org/) (com o "apelido" de pd), que é utilizada para manipulação e análise de dados, escrita em Python.
 
@@ -68,7 +76,10 @@ import pandas as pd
 
 </details>
 
-<details><summary open>## Lendo a PNAD</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Lendo a PNAD
+      </summary>
 
 Agora, utilizamos uma função da biblioteca pandas para importar nosso arquivo de dados para esse ambiente
 
@@ -103,7 +114,10 @@ Criar uma cópia do dataframe original, para garantir a integridade caso algo ac
 
 </details>
 
-<details><summary open>## DataFrame / Visualização dos dados: Tabelas</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> DataFrame / Visualização dos dados: Tabelas
+      </summary>
 
 Para fins didáticos, aqui o DataFrame pode ser ententido apenas como o banco de dados em si. 
 
@@ -181,7 +195,10 @@ df_final[['V2009', 'VD4019']].describe()
 
 </details>
 
-<details><summary open>## Atribuição de rótulos</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Atribuição de rótulos
+      </summary>
 
 Aqui, veremos como alterar o nome das colunas e o rotulos dos dados. Vale ressaltar que quando um dado é do tipo string, este deve estar entre aspas (duplas ou simples), já se for numérico, tem que ser informado sem as aspas.
 
@@ -250,7 +267,10 @@ Comando para ver o tipo de dados de cada coluna: `df.dtypes`
 
 </details>
 
-<details><summary open>## Estrutura condicional e filtros</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Estrutura condicional e filtros
+      </summary>
 
 Criar uma variável de filtro baseada em condições, por exemplo: Se na coluna X o valor for igual a 1 e na Y for igual a 2, a variável de nome Filtro marcará Verdade (True), se não, Falso.
 
@@ -293,7 +313,10 @@ df['Faixa_Etaria'].value_counts(ascending=True)
 
 </details>
 
-<details><summary open>## Divisão de banco de dados</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Divisão de banco de dados
+      </summary>
 
 "Criar" um novo banco de dados baseado na coluna Filtro
 
@@ -307,7 +330,10 @@ Analisar o shape do banco: `df_filter.shape`
 
 </details>
 
-<details><summary open>## Limpeza da base de dados</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Limpeza da base de dados
+      </summary>
 
 Limpar a base de dados consiste em apagar colunas ou casos não desejados.
 
@@ -354,7 +380,10 @@ dfteste = dfteste[dfteste['Rendimento_mensal'].notna()]
 
 </details>
 
-<details><summary open>## Juntar bases de dados</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Juntar bases de dados
+      </summary>
 
 Juntar / Agrupar bancos de dados, funções disponíveis: [.concat()](https://pandas.pydata.org/docs/reference/api/pandas.concat.html); [.join()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html) e  [.merge()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
 
@@ -368,7 +397,10 @@ Analisar shpe do banco: `df_concat.shape`
 
 </details>
 
-<details><summary open>## Exportação de base de dados</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Exportação de base de dados
+      </summary>
 
 A qualquer momento é possível salvar/ exportar o banco de dados para uso posterior e em praticamente qualquer formato/ extensão (excel, csv, txt). O que muda é a função do pandas utilizada
 
@@ -404,7 +436,10 @@ files.download('df_FINAL_Minicurso.xlsx', index=False)
 
 </details>
 
-<details><summary open>## Visualização dos dados: Gráficos</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Visualização dos dados: Gráficos
+      </summary>
 
 Para gerar gráficos, é necessário importar as bibliotecas: [Seaborn](https://seaborn.pydata.org/index.html) e 
 [Matplotlib](https://https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html). Vale ressaltar que é possível ajustar praticamente todos os aspectos visuais conforme consta nas respectivas documentações.
@@ -500,7 +535,10 @@ plt.show(scatt)
 
 </details>
 
-<details><summary open>## Relatório</summary>
+<details>
+      <summary>
+            <b><u><font size="+1"> Relatório
+      </summary>
 
 Já vimos como salvar os gráficos como imagem, agora, para salvar todo esse notebook (de extensão .ipynb), incluindo tópicos, textos, códigos e outputs (TUDO que aparece nele) em PDF, seguir o seguinte passo:
 
