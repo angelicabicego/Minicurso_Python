@@ -1,10 +1,10 @@
-# Minicurso: Pyhton para Manipulação e Análise de Dados
+## Minicurso: Pyhton para Manipulação e Análise de Dados
 
-### Ministrado em parceria com o Programa de Educação Tutorial(PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
+Ministrado em parceria com o Programa de Educação Tutorial(PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
 
 ---
 
-## Introdução
+<details><summary> Introdução </summary>
 
 Esse curso tem como objetivo facilitar o contato com a linguagem Python e suas possibilidades básicas na área de dados, além de trazer segurança e coragem para que qualquer pessoa se aventure nesse universo!
 
@@ -26,10 +26,7 @@ Por isso, nada referente à instalação e configuração do Pyhton foi necessá
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Boas Vindas </font></u></b>
-      </summary>
+<details><summary>Boas Vindas</summary>
 
 Para dar boa sorte nesse processos e testar nosso ambiente de programação, vamos imprimir "Olá, Mundo!" na nossa tela.
 
@@ -39,10 +36,7 @@ print('Olá, Mundo!')
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Google Colab </font></u></b>
-      </summary>
+<details><summary>Google Colab</summary>
 
 O Colaboratory ou “Colab” é um produto do Google Research, que permite que qualquer pessoa escreva e execute código Python arbitrário pelo navegador. Não requer nenhuma configuração e é sem custo financeiro.
 
@@ -53,6 +47,7 @@ Você pode criar um notebook (livro de código) em Arquivos > Novo notebook para
 
 * Upload de Arquivos
 
+
 O Google Colab não consegue ler um arquivo que está no nosso computador, por isso é importante colocar esse arquivo aqui dentro do nosso notebook todas as vezes que formos utilizá-los. Esse arquivo será excluído automaticamente após o encerramento do ambiente de excecução.
 
 Para isso, clicar na pasta no canto esquerdo "Arquivos". Em seguida, clicar no primeiro item para fazer upload do arquivo que está no computador, encontrá-lo e clicar em Abrir, conforme a imagem:
@@ -61,10 +56,7 @@ Para isso, clicar na pasta no canto esquerdo "Arquivos". Em seguida, clicar no p
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Importando Biblioteca </font></u></b>
-      </summary>
+<details><summary>Importando Biblioteca</summary>
 
 Neste primeiro momento, importaremos apenas a Biblioteca [PANDAS](https://pandas.pydata.org/) (com o "apelido" de pd), que é utilizada para manipulação e análise de dados, escrita em Python.
 
@@ -76,10 +68,7 @@ import pandas as pd
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Lendo a PNAD </font></u></b>
-      </summary>
+<details><summary>Lendo a PNAD</summary>
 
 Agora, utilizamos uma função da biblioteca pandas para importar nosso arquivo de dados para esse ambiente
 
@@ -114,10 +103,7 @@ Criar uma cópia do dataframe original, para garantir a integridade caso algo ac
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> DataFrame / Visualização dos dados: Tabelas </font></u></b>
-      </summary>
+<details><summary>DataFrame / Visualização dos dados: Tabelas</summary>
 
 Para fins didáticos, aqui o DataFrame pode ser ententido apenas como o banco de dados em si. 
 
@@ -195,10 +181,7 @@ df_final[['V2009', 'VD4019']].describe()
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Atribuição de rótulos </font></u></b>
-      </summary>
+<details><summary>Atribuição de rótulos</summary>
 
 Aqui, veremos como alterar o nome das colunas e o rotulos dos dados. Vale ressaltar que quando um dado é do tipo string, este deve estar entre aspas (duplas ou simples), já se for numérico, tem que ser informado sem as aspas.
 
@@ -267,10 +250,7 @@ Comando para ver o tipo de dados de cada coluna: `df.dtypes`
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Estrutura condicional e filtros </font></u></b>
-      </summary>
+<details><summary>Estrutura condicional e filtros</summary>
 
 Criar uma variável de filtro baseada em condições, por exemplo: Se na coluna X o valor for igual a 1 e na Y for igual a 2, a variável de nome Filtro marcará Verdade (True), se não, Falso.
 
@@ -313,10 +293,7 @@ df['Faixa_Etaria'].value_counts(ascending=True)
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Divisão de banco de dados </font></u></b>
-      </summary>
+<details><summary>Divisão de banco de dados</summary>
 
 "Criar" um novo banco de dados baseado na coluna Filtro
 
@@ -330,10 +307,7 @@ Analisar o shape do banco: `df_filter.shape`
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Limpeza da base de dados </font></u></b>
-      </summary>
+<details><summary>Limpeza da base de dados</summary>
 
 Limpar a base de dados consiste em apagar colunas ou casos não desejados.
 
@@ -380,10 +354,7 @@ dfteste = dfteste[dfteste['Rendimento_mensal'].notna()]
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Juntar bases de dados </font></u></b>
-      </summary>
+<details><summary>Juntar bases de dados</summary>
 
 Juntar / Agrupar bancos de dados, funções disponíveis: [.concat()](https://pandas.pydata.org/docs/reference/api/pandas.concat.html); [.join()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.join.html) e  [.merge()](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.merge.html)
 
@@ -397,10 +368,7 @@ Analisar shpe do banco: `df_concat.shape`
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Exportação de base de dados </font></u></b>
-      </summary>
+<details><summary>Exportação de base de dados</summary>
 
 A qualquer momento é possível salvar/ exportar o banco de dados para uso posterior e em praticamente qualquer formato/ extensão (excel, csv, txt). O que muda é a função do pandas utilizada
 
@@ -436,10 +404,7 @@ files.download('df_FINAL_Minicurso.xlsx', index=False)
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Visualização dos dados: Gráficos </font></u></b>
-      </summary>
+<details><summary>Visualização dos dados: Gráficos</summary>
 
 Para gerar gráficos, é necessário importar as bibliotecas: [Seaborn](https://seaborn.pydata.org/index.html) e 
 [Matplotlib](https://https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.html). Vale ressaltar que é possível ajustar praticamente todos os aspectos visuais conforme consta nas respectivas documentações.
@@ -535,10 +500,7 @@ plt.show(scatt)
 
 </details>
 
-<details>
-      <summary>
-            <b><u><font size="+2"> Relatório </font></u></b>
-      </summary>
+<details><summary>Relatório</summary>
 
 Já vimos como salvar os gráficos como imagem, agora, para salvar todo esse notebook (de extensão .ipynb), incluindo tópicos, textos, códigos e outputs (TUDO que aparece nele) em PDF, seguir o seguinte passo:
 
@@ -560,7 +522,7 @@ Fazer instalação de um pacote chamado Texlive, necessário nesse processo (dur
 
 </details>
 
-## Finalização
+<details><summary>Finalização</summary>
 
 Há diversas outras possibilidades de se chegar ao mesmo resultado, desde mais simples até as mais complexas e também outras linguagens podem ser utilizadas. Como exposto na introdução, o objeto deste minicurso foi de fazer um apanhado geral de algumas possibilidades de manipulação de banco de dados que proporcionam dados mais legíveis e de fácil análise. Espero que a missão tenha sido cumprida.
 
@@ -569,3 +531,4 @@ Se gostou desse conteúdo, faça um Fork para deixar guardado no seu repositóri
 Contato:
 angelicabicegof@gmail.com
 Presente nas mídias como Angélica Bicego
+</details>
