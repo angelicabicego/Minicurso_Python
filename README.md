@@ -472,7 +472,6 @@ fig.savefig('Imagem5 - Horas Trabalhadas vs Rendimento Mensal Sexo.jpg')
 plt.show(boxplt)
 ```
 
-
 Plotar scatterplot do Seaborn COM formatação da Distribuição de Horas trabalhadas por Rendimento Mensal e salvá-lo
 
 ```
