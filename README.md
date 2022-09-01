@@ -1,4 +1,4 @@
-## Minicurso: Pyhton para Manipulação e Análise de Dados
+## Minicurso: Python para Manipulação e Análise de Dados
 
 Ministrado em parceria com o Programa de Educação Tutorial(PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
 
@@ -12,7 +12,7 @@ Para isso, foi utilizado um banco de dados da PNAD (Pesquisa Nacional de Amostra
 
 Em um primeiro momento, tivemos a parte teórica abrangendo os seguintes temas:
 
-* Visão abrangente sobre Pyhton (e R) e suas possibilidades;
+* Visão abrangente sobre Python (e R) e suas possibilidades;
 
 * Linha Histórica da PNAD;
 
@@ -22,7 +22,7 @@ Em um primeiro momento, tivemos a parte teórica abrangendo os seguintes temas:
 
 Em seguida, tivemos a parte prática no Ambiente de Desenvolvimento do Google COLAB, disponível [aqui](https://colab.research.google.com/drive/1M88teWhAczc3CSpxYitFmRuNU6wB9iFP#scrollTo=3pkH1Qm8BySv) e também a seguir. 
 
-Por isso, nada referente à instalação e configuração do Pyhton foi necessário.
+Por isso, nada referente à instalação e configuração do Python foi necessário.
 
 </details>
 
@@ -109,7 +109,7 @@ Para fins didáticos, aqui o DataFrame pode ser ententido apenas como o banco de
 
 Essa seção é dedicada para códigos que trazem uma visão mais ampla ou até mesmo individual de cada coluna, para analisarmos se ele foi lido corretamente, também tirar frequência das variáveis; fazer cruzamentos; agrupar colunas para melhorar a visualização....
 
-Código para ver as 5 primeiras linhas do Dataframe (pode colocar numero no parenteses para aumentar a quantidade de linhas): `df_pnad.head()ˋ
+Código para ver as 5 primeiras linhas do Dataframe (pode colocar numero no parenteses para aumentar a quantidade de linhas): `df_pnad.head()`
 
 Quantidade de linhas: `len(df)`
 
@@ -370,9 +370,9 @@ Analisar shpe do banco: `df_concat.shape`
 
 <details><summary>Exportação de base de dados</summary>
 
-A qualquer momento é possível salvar/ exportar o banco de dados para uso posterior e em praticamente qualquer formato/ extensão (excel, csv, txt). O que muda é a função do pandas utilizada
+A qualquer momento é possível salvar/ exportar o banco de dados para uso posterior e em praticamente qualquer formato/ extensão (excel, csv, txt). O que muda é a função do pandas utilizada e quais atributos são possíveis de definir.
 
-Definir colunas que ficam / ordem
+Definir colunas a ordem das colunas e quais ficam
 
 ```
 df_final=df_filter1[['Sexo', 'Idade_do_morador', 'Faixa_Etaria', 'Cor_ou_raça',
@@ -386,20 +386,17 @@ df_final=df_filter1[['Sexo', 'Idade_do_morador', 'Faixa_Etaria', 'Cor_ou_raça',
 ```
 
 Exportar Base de dados em tabela do excel **JUPYTER**
-
+A diferença é que passamos o caminho da pasta no nosso computador
 
 ```
 df_filter.to_excel('C:/[caminho]/[arquivo].xlsx', index=False, sheet_name='base') 
-
 ```
 
 Exportar Base de dados em tabela do excel **COLAB**
+Aqui, só passamos o nome do arquivo.
 
 ```
-from google.colab import files
-
-df_final.to_excel('df_FINAL_Minicurso.xlsx')
-files.download('df_FINAL_Minicurso.xlsx', index=False)
+files.download('df_FINAL_Minicurso.xlsx', index=False, sheet_name='base') 
 ```
 
 </details>
@@ -455,7 +452,7 @@ fig = hist.get_figure()
 fig.savefig('Imagem2 - Distribuição Sexo.png')
 ```
 
-Plotar barplot do Seaborn COM formatação da distribuição de Cor/Raça por Sexo e salvá-lo (para as cores: usar atributo palette ou comando `sns.set_theme(style="darkgrid")´)
+Plotar barplot do Seaborn COM formatação da distribuição de Cor/Raça por Sexo e salvá-lo (para as cores: usar atributo palette ou comando `sns.set_theme(style="darkgrid")`
 
 ```
 brplt = sns.barplot(x="Cor_ou_raça", y="Idade_do_morador", data=df_final,  palette="Greens_d");
@@ -516,8 +513,10 @@ Fazer instalação de um pacote chamado Texlive, necessário nesse processo (dur
 !sudo apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic
 ```
 
+Copiar o caminho do notebook que importamos (nos arquivos da barra lateral> clicar nos três pontinhos > copiar caminho), e colocar no espaço indicado CAMINHO, como exemplo: `/content/Minicurso_Python.ipynb`
+
 ```
-!jupyter nbconvert --to pdf /content/KNN.ipynb
+!jupyter nbconvert --to pdf CAMINHO
 ```
 
 </details>
@@ -529,6 +528,8 @@ Há diversas outras possibilidades de se chegar ao mesmo resultado, desde mais s
 Se gostou desse conteúdo, faça um Fork para deixar guardado no seu repositório do GitHub e deixe uma estrelinha, pra ele brilhar hehe
 
 Contato:
+
 angelicabicegof@gmail.com
+
 Presente nas mídias como Angélica Bicego
 </details>
