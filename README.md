@@ -1,8 +1,12 @@
-## Minicurso: Python para Manipulação e Análise de Dados
+## Minicourse: Python for Data Manipulation and Analysis
 
-Ministrado em parceria com o Programa de Educação Tutorial(PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
+Taught in partnership with the Tutorial Education Program (PET) of the UFMG Social Sciences course on August 30 and 31, 2022.
 
 ---
+
+## Minicurso: Python para Manipulação e Análise de Dados
+
+Ministrado em parceria com o Programa de Educação Tutorial (PET) do curso de Ciências Sociais da UFMG nos dias 30 e 31 de agosto de 2022.
 
 <details><summary> Introdução </summary>
 
